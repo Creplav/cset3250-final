@@ -17,4 +17,6 @@ function openTab(event, tabName){
         tabContent[i].style.display = "none";
 
     document.getElementById(tabName).style.display = "block";
+    $('.tabnav').find('.active').removeClass('active');
+    $(`#${tabName}-link`).addClass('active');
 }

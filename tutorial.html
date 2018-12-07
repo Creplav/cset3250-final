@@ -39,13 +39,13 @@
         <h1>Tutorials</h1>
         <div class="tabnav">
             <ul>
-                <li class="tablink active">
+                <li class="tablink active" id="ethereum-wallet-link">
                     <a onclick="openTab(event, 'ethereum-wallet')">Ethereum</a>
                 </li>
-                <li class="tablink">
+                <li class="tablink" id="mining-rig-link">
                     <a onclick="openTab(event, 'mining-rig')">Mining</a>
                 </li>
-                <li class="tablink">
+                <li class="tablink" id="gpu-specs-link">
                     <a onclick="openTab(event, 'gpu-specs')">GPU Specs</a>
                 </li>
             </ul>
@@ -137,12 +137,6 @@
     <script src="images.json"></script>
     <script src="photoViewer.js"></script>
     <script src="tableAjax.js"></script>
-
-    <script>
-    $(document).ready(function(){
-        console.log('jquery is working');
-    })
-    </script>
 </body>
 
 </html>
