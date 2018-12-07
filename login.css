@@ -1,0 +1,36 @@
+form {
+    text-align: left;
+    overflow: hidden;
+}
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    width: 100%;
+    float: right;
+    font-size: 1em;
+    background-color: #0096fa;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.container h1 {
+    font-size: 3em;
+}
+
+.disabled {
+    background-color: grey;
+}

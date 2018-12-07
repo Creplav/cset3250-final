@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="profile.js"></script>
+    <title>CryptoNews</title>
+    <link rel="stylesheet" href="photoViewer.css">
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <h1>CryptoNews</h1>
+            <h3>Your source for the latest and greatest on cryptocurrencies</h3>
+        </header>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="tutorials.html" class="active">Tutorials</a>
+            </li>
+            <li id="login">
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Tutorials</h1>
+        <div class="tabnav">
+            <ul>
+                <li class="tablink active">
+                    <a onclick="openTab(event, 'ethereum-wallet')">Ethereum</a>
+                </li>
+                <li class="tablink">
+                    <a onclick="openTab(event, 'mining-rig')">Mining</a>
+                </li>
+                <li class="tablink">
+                    <a onclick="openTab(event, 'gpu-specs')">GPU Specs</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="tabcontent" id="ethereum-wallet">
+            <h2>Setting up your Ethereum wallet</h2>
+            <p>
+                To set up your wallet you must download a program to make one for you. 
+                You can use an online program that will generate a wallet for you 
+                or you can download a program to your computer to generate one. 
+                Generating a wallet using software on your computer can be a little bit more complicated. 
+            </p>
+            <h4>Using an online service</h4>
+            <p>
+                Using an online service such as 
+                <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a> is a pretty straightforward and easy solution. 
+                Just click on 'New wallet' and generate a wallet. Make sure you save the address and any key generated with it. 
+            </p>
+            <h4>Using Geth</h4>
+            <p>
+                Using Geth is a little bit more complicated. You first need to download Geth. 
+                Then you need to open a terminal window and enter a few commands. 
+            </p>
+            <p>
+                You can find out more on the Ethereum website <a href="https://www.ethereum.org/cli" target="_blank">here</a>.
+            </p>
+            <button onclick="toggleVideo()">Toggle video</button>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tPzJbDI1yxo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="video"></iframe>
+            </div>
+        </div>
+        <div class="tabcontent" id="mining-rig">
+            <h2>Building a mining rig</h2>
+            <!-- viewer -->
+            <div class="view-container">
+                <img src="" alt="" class="viewer"/>
+                <p id="image-id"></p>
+            </div>
+            <!-- Thumbnails -->
+            <div class="thumbnails"></div>
+            <!-- Description -->
+            <p id="description"></p>
+        </div>
+        <div class="tabcontent" id="gpu-specs">
+                <h2>GPU Specs</h2>
+                <input type="search" name="" id="search" placeholder="search">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Memory</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td>GTX 970</td>
+                            <td>4 GB</td>
+                            <td>$299.99</td>
+                        </tr>
+                        <tr>
+                            <td>GTX 1060</td>
+                            <td>4 GB</td>
+                            <td>$299.99</td>
+                        </tr>
+                    </tbody>
+            </table>
+            <button onclick="loadGPUS()">Load GPUS</button>
+        </div>
+    </div>
+
+    <div>
+        <footer>
+            <p>Made as a final project for CSET 3250</p>
+            <p>&copy; Benjamin Doty</p>
+        </footer>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+    <script src="search.js"></script>
+    <script src="tab.js"></script>
+    <script src="video.js"></script>
+    <!-- Include the JSON file so that we can reference
+    it in the  index.js file -->
+    <script src="images.json"></script>
+    <script src="photoViewer.js"></script>
+    <script src="tableAjax.js"></script>
+</body>
+
+</html>

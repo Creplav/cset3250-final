@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="cookie.js"></script>
+    <title>CryptoNews</title>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <h1>CryptoNews</h1>
+            <h3>Your source for the latest and greatest on cryptocurrencies</h3>
+        </header>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="tutorial.html">Tutorials</a>
+            </li>
+            <li id="login">
+                <a href="login.html" class="active">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form
+            id="form"
+            onsubmit="writeCookies()"
+            name="loginForm"
+            required>
+            <!-- action="../cgi-bin/form_get.py" -->
+            <p>Username:</p>
+            <input type="text" id="usernameInput" name="username" placeholder="Username" required>
+
+            <p>Email address:</p>
+            <input type="email" id="emailInput" name="email" id="email" placeholder="Email Address" required>
+
+            <p>Password: </p>
+            <input type="password" id="passwordInput" placeholder="Password" required>
+            <p id="passwordHint">Password must be 8 characters long, contain at least 1 uppercase and 1 lowercase letter, 1 number, and 1 symbol.</p>
+            <p>
+                <input type="checkbox" name="" id=""> Show password
+            </p>
+
+            <p>What is your most common source of obtaining cryptocurrencies?</p>
+            <select name="acquisitionType" id="acquisitionType">
+                <option value="trading">Trading</option>
+                <option value="mining">Mining</option>
+                <option value="faucets">Faucets</option>
+            </select>
+
+            <input type="submit" id="submitButton" value="Submit">
+        </form>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="formEnhancements.js"></script>
+    </div>
+    <div>
+        <footer>
+            <p>Made as a final project for CSET 3250</p>
+            <p>&copy; Benjamin Doty</p>
+        </footer>
+    </div>
+</body>
+
+</html>

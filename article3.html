@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="profile.js"></script>
+    <title>CryptoNews</title>
+
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <h1>CryptoNews</h1>
+            <h3>Your source for the latest and greatest on cryptocurrencies</h3>
+        </header>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="tutorial.html">Tutorials</a>
+            </li>
+            <li id="login">
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="article">
+        <h1>Plattsburgh, New York Bans Cryptocurrency Mining</h1>
+        <div id="map"></div>
+        <small>Published 11/30/18</small>
+        <hr>
+        <p>Plattsburgh, New York banned cryptocurrency mining due to low electricity prices in the city.</p>
+        <div>
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+    <div>
+        <footer>
+            <p>Made as a final project for CSET 3250</p>
+            <p>&copy; Benjamin Doty</p>
+        </footer>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOtDQMyw-ZFvqlvQqJtxQ41DZn9tGGBCY&callback=initMap"
+    async defer></script>
+    <script src="map.js"></script>
+</body>
+
+</html>

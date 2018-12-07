@@ -1,0 +1,31 @@
+#image-id {
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: rgba(120, 120, 120, 0.65);
+    color: white;
+    padding: 5px;
+    border-radius: 100px;
+    width: 100px;
+    text-align: center;
+    left: 47.5%;
+    top: 47.5%;
+  
+}
+
+.viewer {
+    width: 1000px;
+    height: 500px;
+}
+
+.thumbnail {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    width: 100px;
+    height: 100px;
+}
+
+#description {
+    border: 1px solid black;
+    padding: 5px;
+}
