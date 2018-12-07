@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
     redirectToLogin();
 }, false);
 
-// function checkIfLoggedIn(){
-//     if (document.cookie.split(';').filter(function(item) {
-//         return item.indexOf('loggedIn=') >= 0
-//     }).length) {
-//         console.log('The cookie exists')
-//         return true;
-//     }
-//     return false;
-// }
+function checkIfLoggedIn(){
+    if (document.cookie.split(';').filter(function(item) {
+        return item.indexOf('loggedIn=') >= 0
+    }).length) {
+        console.log('The cookie exists')
+        return true;
+    }
+    return false;
+}
 
 function replaceLoginWithProfile(){
     document.getElementById('login').innerHTML = '<a href="profile.html">Profile</a>'

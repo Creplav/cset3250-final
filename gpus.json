@@ -1,5 +1,19 @@
-[{
-    "name" : "GTX 970",
-    "memory": 4,
-    "price": 299
-}]
+{
+    "gpus": [
+        {
+            "name" : "GTX 970",
+            "memory": 4,
+            "price": 299
+        },
+        {
+            "name" : "GTX 1060",
+            "memory": 4,
+            "price": 299
+        },
+        {
+            "name" : "GTX 1080",
+            "memory": 8,
+            "price": 599
+        }
+    ]
+}

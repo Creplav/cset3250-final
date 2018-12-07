@@ -1,17 +1,29 @@
 let imageList = [];
 
-$(window).on('load', () => {
+$(document).ready(() => {
+    console.log('Loaded');
     // Grab the images from the JSON file
-    let json = JSON.parse(images);
-    let run = 0;
-    json.forEach((imageObj) => {
-        imageList.push(imageObj);
-        createThumbnail(imageObj.imageLocation);
-        if(run === 0) setInitialItems(imageObj);
-        run++;
-    });
+    let xhttp = new XMLHttpRequest();
+    xhttp.overrideMimeType('application/json');
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            let jsonObject = JSON.parse(this.responseText);
+            console.log(jsonObject);
+            let run = 0;
+            jsonObject.images.forEach((imageObj) => {
+                imageList.push(imageObj);
+                createThumbnail(imageObj.imageLocation);
+                if(run === 0) setInitialItems(imageObj);
+                run++;
+            });
+            console.log(imageList);
+        }
+    };
+    xhttp.open('GET', 'images.json', true);
+    xhttp.send();
 
-    $('.thumbnail').on('click', (event) => {
+    $(document).on('click', '.thumbnail', (event) => {
+        console.log('clicky')
         let image = findImageByPath('./images/tutorial/' + /tutorial\d.jpg/.exec(event.target.src));
         viewImage(image.imageLocation);
         updateDescriptionText(image.description);

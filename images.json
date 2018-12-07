@@ -1,8 +1,5 @@
-/* This runs as JavaScript although it's technically a JSON file.
-* This is because HTML runs scripts as JavaScript
-* unless otherwise stated.
-*/
-images = `[
+{
+  "images": [
     {
 
       "id": 1,
@@ -44,4 +41,5 @@ images = `[
       "imageLocation": "./images/tutorial/tutorial8.jpg",
       "description": "Step 8: Sit back and profit"
     }
-]`
+  ]
+}
